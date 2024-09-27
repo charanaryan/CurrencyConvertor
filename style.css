@@ -1,0 +1,151 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling with Dark and Light Green Gradient */
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #004d00, #00cc66); /* Dark to Light Green Gradient */
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white for frosted glass effect */
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    border-radius: 15px;
+    color: #c4bbf0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Blurred background for glassmorphism */
+}
+
+/* Form Elements */
+.amount, .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.amount p, .dropdown p {
+    font-size: large;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+.amount input, form select, form button {
+    background-color: rgba(0, 0, 0, 0.2); /* Transparent background for inputs */
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+.amount input {
+    border: 1px solid #c4bbf0;
+    opacity: 0.8;
+    width: 100%;
+}
+
+/* Dropdown and Select */
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 2rem 0 2rem 0;
+}
+
+.dropdown i{
+    /* background-color: red; */
+    margin-top: 20px;
+
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.select img {
+    max-width: 2rem;
+    border-radius: 0.25rem;
+}
+
+.select select {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 1rem;
+    border: 1px solid #c4bbf0;
+}
+
+.capsule{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* Button Styling */
+form button {
+    background-color: #00cc66; /* Light green */
+    color: #004d00; /* Dark green text */
+    font-size: 1.15rem;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+form button:hover {
+    background-color: #004d00; /* Dark green on hover */
+    color: #00cc66; /* Light green text on hover */
+}
+
+/* Message Section */
+.msg {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+
+
+}
+
+/* Dark Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #004d00; /* Dark green track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00cc66; /* Light green thumb */
+    border-radius: 10px;
+    border: 3px solid #004d00; /* Dark green border */
+}
+
+.select-container select option{
+    color: black;
+}
+
+
