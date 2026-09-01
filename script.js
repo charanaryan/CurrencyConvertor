@@ -1,6 +1,6 @@
 const baseURL = "https://api.exchangerate-api.com/v4/latest"
 const dropdowns = document.querySelectorAll(".dropdown select");
-const btn = document.querySelector(".button");
+const btn = document.querySelector("button");
 const fromCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
 const msg = document.querySelector(".msg");
@@ -68,6 +68,9 @@ const getExchangeRate = async () => {
   try {
     const rates = await fetchExchangeRates(fromCurrency);
     const exchangeRate = rates[toCurrency];
+    if (exchangeRate === undefined) {
+      throw new Error(`Exchange rate for ${toCurrency} not found`);
+    }
     const convertedAmount = (amount * exchangeRate).toFixed(2);
     msg.innerText = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
   } catch (error) {
